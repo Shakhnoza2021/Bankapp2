@@ -18,8 +18,14 @@ public class BankAccount {
     }
 
     public double getMoney(double money){
-        this.balance = this.balance - money;
-        return money;
+        if (this.balance > 0 && this.balance >= money) {
+            this.balance = this.balance - money;
+            System.out.println("Снятие со счета " + money + " руб.");
+            return money;
+        } else {
+            System.out.println("Снятие со счета " + money + " руб. Недостаточно средств.");
+            return 0;
+        }
     }
 
     public void putMoney(double money){
