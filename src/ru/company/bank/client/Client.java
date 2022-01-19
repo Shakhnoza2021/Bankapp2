@@ -17,22 +17,6 @@ public class Client {
         this.passportNum = passportNum;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public BankAccount getAccount() {
-        return account;
-    }
-
-    public void setAccount(BankAccount account) {
-        this.account = account;
-    }
-
     public void putMoneyIntoAccount(BankAccount bankAccount, double sum){
         bankAccount.putMoney(sum);
         System.out.println("Пополнение счета на " + sum + " руб.");
@@ -50,5 +34,20 @@ public class Client {
         return bank.getMoneyFromATM(this,sum);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public BankAccount getAccount() {
+        return account;
+    }
+
+    public void setAccount(BankAccount account) {
+        this.account = account;
+    }
 
 }

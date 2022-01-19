@@ -5,12 +5,12 @@ import ru.company.bank.client.Client;
 import ru.company.bank.staff.*;
 
 public class Bank {
-    String bankName;
-    BankTeller bankTeller;
-    Consultant consultant;
-    Director director;
-    Cashier cashier;
-    ATM atm;
+    private String bankName;
+    private BankTeller bankTeller;
+    private Consultant consultant;
+    private Director director;
+    private Cashier cashier;
+    private ATM atm;
     private Staff staff[];
 
     public Bank(String bankName) {
