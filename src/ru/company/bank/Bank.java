@@ -31,6 +31,10 @@ public class Bank {
         return atm.getMoney(client.getAccount(), sum);
     }
 
+    public void payForInternetServices(Client client, double sumOfPayment){
+        bankTeller.payForInternetServices(client, sumOfPayment);
+    }
+
     public Staff[] getStaff() {
         return staff;
     }

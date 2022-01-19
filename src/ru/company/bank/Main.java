@@ -20,5 +20,7 @@ public class Main {
 
         client.getMoney(sberbank, 9000);
         System.out.println("Баланс счета: " + client.getTheAccountBalance());
+
+        client.payForInternetServices(sberbank, 500);
     }
 }

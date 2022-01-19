@@ -5,6 +5,7 @@ import ru.company.bank.bankAccount.CreditBankAccount;
 import ru.company.bank.bankAccount.CurrentBankAccount;
 import ru.company.bank.bankAccount.DepositBankAccount;
 import ru.company.bank.client.Client;
+import ru.company.bank.productsAndSevices.PaymentOperations;
 
 public class BankTeller extends Staff {
 
@@ -19,5 +20,12 @@ public class BankTeller extends Staff {
             System.out.println("Открытие счета. Клиент: " + client.getName() + " " + client.getLastname());
             return new CurrentBankAccount("12345", client, "RUB", 0, "5432765");
         } else return new DepositBankAccount();
+    }
+
+    public void payForInternetServices(Client client, double sumOfPayment){
+        PaymentOperations payments = new PaymentOperations();
+        if (payments.payForInternetServices(client.getAccount(), sumOfPayment))
+            System.out.println("Оплата " + sumOfPayment + " руб. за услуги интернет внесена");
+        else System.out.println("Недостаточно средств на счете для оплаты услуг");
     }
 }

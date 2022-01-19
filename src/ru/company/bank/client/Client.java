@@ -38,6 +38,10 @@ public class Client {
         System.out.println("Пополнение счета на " + sum + " руб.");
     }
 
+    public void payForInternetServices(Bank bank, double sumOfPayment){
+        bank.payForInternetServices(this, sumOfPayment);
+    }
+
     public double getTheAccountBalance(){
         return account.getBalance();
     }
